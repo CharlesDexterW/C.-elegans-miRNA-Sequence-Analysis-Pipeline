@@ -47,10 +47,11 @@ The pipeline generates a directory cel_analysis_v22/ containing:
 **cel_mirna_v22_results.tsv:** A tab-separated file.
 ## Output Preview
 
-<p align="center">
-  <img src="https://github.com/CharlesDexterW/C.-elegans-miRNA-Sequence-Analysis-Pipeline/blob/main/Captura%20desde%202026-01-11%2002-32-34.png?raw=true" width="450" hspace="20">
-  <span style="font-size: smaller;"><b>Figure 1</b>: Summary Statistics of C. elegans miRNA (miRBase v22) </span>
-</p> 
+<div align="center">
+  <img src="https://github.com/CharlesDexterW/C.-elegans-miRNA-Sequence-Analysis-Pipeline/blob/main/Captura%20desde%202026-01-11%2002-32-34.png?raw=true" width="100%">
+  <br>
+  <p><b>Figure 1</b>: Summary Statistics of C. elegans miRNA (miRBase v22)</p>
+</div>
 
 ## Built With
 **Bash:** Shell scripting for process automation.
