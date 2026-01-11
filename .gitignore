@@ -1,0 +1,22 @@
+# --- Data Files ---
+# Ignore raw FASTA files
+*.fa
+*.fna
+*.fastq
+*.gz
+
+# --- Directories ---
+# Ignore the analysis workspace folders
+cel_analysis/
+cel_analysis_v22/
+
+# --- Results ---
+# Ignore temporary or large output tables
+*.tsv
+*.csv
+*.log
+
+# --- System Files ---
+# Ignore OS-specific files (like Ubuntu's thumb caches)
+.DS_Store
+Thumbs.db
