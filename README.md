@@ -46,8 +46,11 @@ The pipeline generates a directory cel_analysis_v22/ containing:
 
 **cel_mirna_v22_results.tsv:** A tab-separated file.
 ## Output Preview
-[Insert figure]
 
+<p align="center">
+  <img src="https://github.com/CharlesDexterW/C.-elegans-miRNA-Sequence-Analysis-Pipeline/blob/main/Captura%20desde%202026-01-11%2002-32-34.png?raw=true" width="450" hspace="20">
+  <span style="font-size: smaller;"><b>Figure 1</b>: Summary Statistics of C. elegans miRNA (miRBase v22) </span>
+</p> 
 
 ## Built With
 **Bash:** Shell scripting for process automation.
@@ -57,8 +60,8 @@ The pipeline generates a directory cel_analysis_v22/ containing:
 **AWK:** For terminal report formatting.
 
 ## Bibliographic Sources
-Kozomara, A., et al. (2019). miRBase: from microRNA sequences to function. Nucleic Acids Research, 47(D1).
+*Kozomara, A., et al. (2019). miRBase: from microRNA sequences to function. Nucleic Acids Research, 47(D1).*
 
-Shen, W. (2016). SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q Manipulation. PLOS ONE.
+*Shen, W. (2016). SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q Manipulation. PLOS ONE.*
 
-Ambros, V. (1993). The C. elegans heterochronic gene lin-4. Cell.
+*Ambros, V. (1993). The C. elegans heterochronic gene lin-4. Cell.*
