@@ -22,3 +22,43 @@ The script automates the extraction of these precursors, converts the RNA sequen
 ## Installation & Usage
 ### Prerequisites
 Ensure you have seqkit installed on your Ubuntu system:
+
+Bash:
+sudo apt update && sudo apt install seqkit -y
+
+## Execution
+Clone the repository:
+
+Bash
+
+git clone https://github.com/your-username/miRNA-analysis-pipeline.git
+cd miRNA-analysis-pipeline
+Set permissions and run:
+
+Bash
+
+chmod +x analyze_mirna.sh
+./analyze_mirna.sh
+## Output
+The pipeline generates a directory cel_analysis_v22/ containing:
+
+**hairpin.fa:** The raw miRBase dataset.
+
+**cel_mirna_v22_results.tsv:** A tab-separated file.
+## Output Preview
+[Insert figure]
+
+
+## Built With
+**Bash:** Shell scripting for process automation.
+
+**SeqKit:** Ultra-fast toolkit for FASTA/Q manipulation.
+
+**AWK:** For terminal report formatting.
+
+## Bibliographic Sources
+Kozomara, A., et al. (2019). miRBase: from microRNA sequences to function. Nucleic Acids Research, 47(D1).
+
+Shen, W. (2016). SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q Manipulation. PLOS ONE.
+
+Ambros, V. (1993). The C. elegans heterochronic gene lin-4. Cell.
