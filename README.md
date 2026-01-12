@@ -48,7 +48,7 @@ The pipeline generates a directory cel_analysis_v22/ containing:
 ## Output Preview
 
 <div align="center">
-  <img src="https://github.com/CharlesDexterW/C.-elegans-miRNA-Sequence-Analysis-Pipeline/blob/main/Captura%20desde%202026-01-11%2002-32-34.png?raw=true" width="100%">
+  <img src="https://github.com/CharlesDexterW/C.-elegans-miRNA-Sequence-Analysis-Pipeline/blob/main/Summary_stats.png?raw=true" width="100%">
   <br>
   <p><b>Figure 1</b>: Summary Statistics of C. elegans miRNA (miRBase v22)</p>
 </div>
