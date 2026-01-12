@@ -1,4 +1,13 @@
 #!/bin/bash
+set -euo pipefail
+
+# --- DEPENDENCY CHECK ---
+for cmd in wget seqkit awk; do
+    command -v "$cmd" >/dev/null 2>&1 || {
+        echo "Error: required command '$cmd' not found." >&2
+        exit 1
+    }
+done
 
 # --- CONFIGURATION ---
 DATA_DIR="cel_analysis_v22"
@@ -24,7 +33,10 @@ fi
 # --- 3. FILTER & PROCESS ---
 echo -e "\e[34m[3/4]\e[0m Processing C. elegans sequences..."
 # Filtering, converting to DNA, and outputting Name, Length, and GC%
-seqkit grep -p "cel-let-7" -p "cel-lin-4" "$INPUT_FILE" | \
+# -i: Ignore case
+# -r: Use regex
+# Pattern: finds any header containing "cel-" followed by "let-7" or "lin-4"
+seqkit grep -i -r -p "cel-.*let-7|cel-.*lin-4" "$INPUT_FILE" | \
 seqkit seq --rna2dna | \
 seqkit fx2tab --name --length --gc > "$OUTPUT_FILE"
 
@@ -33,10 +45,10 @@ echo -e "\e[34m[4/4]\e[0m Generating Summary Statistics..."
 echo -e "\n--- BIOCHEMISTRY REPORT: C. elegans miRNA (miRBase v22) ---"
 echo -e "Generated on: $(date)"
 echo -e "---------------------------------------------------------"
-printf "%-25s %-10s %-10s\n" "Sequence_ID" "Length" "GC_Content"
+printf "%-60s %-10s %-10s\n" "Sequence_ID" "Length" "GC_Contet"
 
 # Formatting the TSV output for a professional look
-awk -F'\t' '{printf "%-25s %-10s %-10.2f%%\n", $1, $2, $3}' "$OUTPUT_FILE"
+awk -F'\t' '{printf "%-60s %-10s %-10.2f%%\n", $1, $2, $3}' "$OUTPUT_FILE"
 
 echo -e "---------------------------------------------------------"
 echo -e "\e[32mSUCCESS:\e[0m Static analysis complete."
